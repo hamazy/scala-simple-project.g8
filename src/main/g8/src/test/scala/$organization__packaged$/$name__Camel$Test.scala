@@ -1,9 +1,9 @@
 package $organization$
 
 import org.scalatest.{BeforeAndAfter, FlatSpec, GivenWhenThen}
-import org.scalatest.matchers.ShouldMatchers
+import org.scalatest.Matchers
 
-class $name;format="Camel"$Test extends FlatSpec with BeforeAndAfter with GivenWhenThen with ShouldMatchers {
+class $name;format="Camel"$Test extends FlatSpec with BeforeAndAfter with GivenWhenThen with Matchers {
 
   before {
   }
