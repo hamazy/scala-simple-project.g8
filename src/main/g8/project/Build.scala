@@ -5,20 +5,20 @@ object BuildSettings {
   val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := "$organization$",
     version := "$version$",
-    scalaVersion := "2.10.2",
-    scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-encoding", "utf8")
+    scalaVersion := "2.10.3",
+    scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-encoding", "utf8", "-Xlint")
   )
 }
 
 object Dependencies {
-  val akkaActor = "com.typesafe.akka"   %%  "akka-actor"        % "2.2.0-RC1"
-  val akkaSlf4j = "com.typesafe.akka"   %%  "akka-slf4j"        % "2.2.0-RC1"
-  val akkaTestkit = "com.typesafe.akka"   %%  "akka-testkit"      % "2.2.0-RC1" % "test"
-  val scalaLogging = "com.typesafe"        %% "scalalogging-slf4j" % "1.0.1"
+  val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.2.3"
+  val akkaSlf4j = "com.typesafe.akka" %% "akka-slf4j" % "2.2.3"
+  val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % "2.2.3" % "test"
+  val scalaLogging = "com.typesafe" %% "scalalogging-slf4j" % "1.0.1"
   val logback = "ch.qos.logback" % "logback-classic" % "1.0.13"
-  val scalatest = "org.scalatest"       %% "scalatest"          % "2.0.M8" % "test"
+  val scalatest = "org.scalatest" %% "scalatest" % "2.0.M8" % "test"
   val pegdown = "org.pegdown" % "pegdown" % "1.0.1" % "test"
-  val mockito = "org.mockito"         % "mockito-core"        % "1.9.5" % "test"
+  val mockito = "org.mockito" % "mockito-core" % "1.9.5" % "test"
 
   val commonDeps = Seq(
     akkaActor,
