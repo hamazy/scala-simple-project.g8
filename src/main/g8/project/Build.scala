@@ -5,18 +5,20 @@ object BuildSettings {
   val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := "$organization$",
     version := "$version$",
-    scalaVersion := "2.10.3",
+    scalaVersion := "2.10.4",
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-encoding", "utf8", "-Xlint")
   )
 }
 
 object Dependencies {
-  val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.2.3"
-  val akkaSlf4j = "com.typesafe.akka" %% "akka-slf4j" % "2.2.3"
-  val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % "2.2.3" % "test"
-  val scalaLogging = "com.typesafe" %% "scalalogging-slf4j" % "1.0.1"
-  val logback = "ch.qos.logback" % "logback-classic" % "1.0.13"
-  val scalatest = "org.scalatest" %% "scalatest" % "2.0.M8" % "test"
+  val akkaVersion = "2.3.2"
+
+  val akkaActor = "com.typesafe.akka" %% "akka-actor" % akkaVersion
+  val akkaSlf4j = "com.typesafe.akka" %% "akka-slf4j" % akkaVersion
+  val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"
+  val scalaLogging = "com.typesafe" %% "scalalogging-slf4j" % "1.1.0"
+  val logback = "ch.qos.logback" % "logback-classic" % "1.1.2"
+  val scalatest = "org.scalatest" %% "scalatest" % "2.1.3" % "test"
   val pegdown = "org.pegdown" % "pegdown" % "1.0.1" % "test"
   val mockito = "org.mockito" % "mockito-core" % "1.9.5" % "test"
 
