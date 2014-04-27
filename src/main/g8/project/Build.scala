@@ -5,7 +5,7 @@ object BuildSettings {
   val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := "$organization$",
     version := "$version$",
-    scalaVersion := "2.10.4",
+    scalaVersion := "2.11.0",
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-encoding", "utf8", "-Xlint")
   )
 }
@@ -16,9 +16,9 @@ object Dependencies {
   val akkaActor = "com.typesafe.akka" %% "akka-actor" % akkaVersion
   val akkaSlf4j = "com.typesafe.akka" %% "akka-slf4j" % akkaVersion
   val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"
-  val scalaLogging = "com.typesafe" %% "scalalogging-slf4j" % "1.1.0"
+  val scalaLogging = "com.typesafe.scala-logging" %% "scala-logging-slf4j" % "2.1.2"
   val logback = "ch.qos.logback" % "logback-classic" % "1.1.2"
-  val scalatest = "org.scalatest" %% "scalatest" % "2.1.3" % "test"
+  val scalatest = "org.scalatest" %% "scalatest" % "2.1.4" % "test"
   val pegdown = "org.pegdown" % "pegdown" % "1.0.1" % "test"
   val mockito = "org.mockito" % "mockito-core" % "1.9.5" % "test"
 
