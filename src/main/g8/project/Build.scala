@@ -11,15 +11,15 @@ object BuildSettings {
 }
 
 object Dependencies {
-  val akkaVersion = "2.3.2"
+  val akkaVersion = "2.3.3"
 
   val akkaActor = "com.typesafe.akka" %% "akka-actor" % akkaVersion
   val akkaSlf4j = "com.typesafe.akka" %% "akka-slf4j" % akkaVersion
   val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"
   val scalaLogging = "com.typesafe.scala-logging" %% "scala-logging-slf4j" % "2.1.2"
   val logback = "ch.qos.logback" % "logback-classic" % "1.1.2"
-  val scalatest = "org.scalatest" %% "scalatest" % "2.1.4" % "test"
-  val pegdown = "org.pegdown" % "pegdown" % "1.0.1" % "test"
+  val scalatest = "org.scalatest" %% "scalatest" % "2.2.0" % "test"
+  val pegdown = "org.pegdown" % "pegdown" % "1.4.2" % "test"
   val mockito = "org.mockito" % "mockito-core" % "1.9.5" % "test"
 
   val commonDeps = Seq(
