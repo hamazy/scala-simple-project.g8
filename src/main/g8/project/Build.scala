@@ -6,7 +6,8 @@ object BuildSettings {
     organization := "$organization$",
     version := "$version$",
     scalaVersion := "2.11.0",
-    scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-encoding", "utf8", "-Xlint")
+    scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-encoding", "utf8", "-Xlint"),
+    shellPrompt := { state => Project.extract(state).currentProject.id + " > " }
   )
 }
 
